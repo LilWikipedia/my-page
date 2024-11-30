@@ -1,10 +1,17 @@
-import { Download } from "lucide-react";
+import { Download, Shield, Terminal, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/home/Header";
 import Education from "@/components/home/Education";
 import Testimonials from "@/components/home/Testimonials";
+import { useState, useEffect } from "react";
 
 const Index = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
       <Header />
