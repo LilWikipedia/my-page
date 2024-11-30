@@ -15,17 +15,19 @@ const Education = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-mono text-cyber-blue mb-8">Education</h2>
-      <div className="space-y-8">
+    <section className="container mx-auto px-4 py-8">
+      <h2 className="text-2xl font-mono text-cyber-green mb-6">Education</h2>
+      <div className="space-y-6">
         {education.map((edu) => (
-          <div key={edu.degree} className="glass p-6 rounded-lg">
-            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
-              <span className="text-cyber-gray font-mono">{edu.period}</span>
-              <span className="text-cyber-gray/60">{edu.school}</span>
+          <div key={edu.degree} className="glass rounded-lg p-4">
+            <div className="flex items-start gap-4">
+              <span className="text-cyber-gray font-mono text-sm whitespace-nowrap">{edu.period}</span>
+              <div className="flex-1">
+                <span className="text-cyber-gray/60 text-sm block mb-2">{edu.school}</span>
+                <h3 className="text-lg text-white mb-2">{edu.degree}</h3>
+                <p className="text-cyber-gray/80 text-sm leading-relaxed">{edu.description}</p>
+              </div>
             </div>
-            <h3 className="text-xl text-white mb-3">{edu.degree}</h3>
-            <p className="text-cyber-gray/80 leading-relaxed">{edu.description}</p>
           </div>
         ))}
       </div>

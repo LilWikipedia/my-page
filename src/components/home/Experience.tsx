@@ -27,17 +27,19 @@ const Experience = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-mono text-cyber-blue mb-8">Experience</h2>
-      <div className="space-y-8">
+    <section className="container mx-auto px-4 py-8">
+      <h2 className="text-2xl font-mono text-cyber-green mb-6">Experience</h2>
+      <div className="space-y-6">
         {experiences.map((exp) => (
-          <div key={exp.title} className="glass p-6 rounded-lg">
-            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
-              <span className="text-cyber-gray font-mono">{exp.period}</span>
-              <span className="text-cyber-gray/60">{exp.company}</span>
+          <div key={exp.title} className="glass rounded-lg p-4">
+            <div className="flex items-start gap-4">
+              <span className="text-cyber-gray font-mono text-sm whitespace-nowrap">{exp.period}</span>
+              <div className="flex-1">
+                <span className="text-cyber-gray/60 text-sm block mb-2">{exp.company}</span>
+                <h3 className="text-lg text-white mb-2">{exp.title}</h3>
+                <p className="text-cyber-gray/80 text-sm leading-relaxed">{exp.description}</p>
+              </div>
             </div>
-            <h3 className="text-xl text-white mb-3">{exp.title}</h3>
-            <p className="text-cyber-gray/80 leading-relaxed">{exp.description}</p>
           </div>
         ))}
       </div>
