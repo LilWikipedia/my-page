@@ -31,9 +31,20 @@ const Index = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-2">
-        <div className="flex justify-end space-x-4">
-          <Link to="/blog" className="text-cyber-green hover:animate-text-glow">Blog</Link>
+      <nav className="container mx-auto px-4 py-2 border-b border-cyber-green/20">
+        <div className="flex justify-end space-x-6">
+          <Link 
+            to="/" 
+            className="text-cyber-green text-lg font-bold hover:animate-text-glow border-b-2 border-cyber-green"
+          >
+            Home
+          </Link>
+          <Link 
+            to="/blog" 
+            className="text-cyber-green text-lg font-bold hover:animate-text-glow"
+          >
+            Blog
+          </Link>
         </div>
       </nav>
 
