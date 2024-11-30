@@ -1,4 +1,4 @@
-import { Shield, Terminal, Server, Database, Bug, Lock } from "lucide-react";
+import { Shield, Terminal, Server, Database, Bug, Lock, Mail, MapPin, Globe } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -10,13 +10,29 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
+      {/* Quick Contact Info */}
+      <div className="container mx-auto px-4 py-4 flex justify-end space-x-6 text-sm">
+        <a href="mailto:ashutosh@barot.me" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+          <Mail size={14} />
+          ashutosh@barot.me
+        </a>
+        <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+          <Globe size={14} />
+          ashutoshbarot.com
+        </a>
+        <span className="flex items-center gap-2 text-cyber-green">
+          <MapPin size={14} />
+          San Francisco Bay Area
+        </span>
+      </div>
+
       {/* Hero Section */}
       <header className="container mx-auto px-4 py-20">
         <div className="overflow-hidden whitespace-nowrap border-r-2 border-cyber-green animate-typing">
           <h1 className="text-4xl md:text-6xl font-mono text-cyber-green animate-text-glow">
-            John Doe
+            Ashutosh Barot
           </h1>
-          <p className="text-xl md:text-2xl mt-2">Cyber Security Engineer</p>
+          <p className="text-xl md:text-2xl mt-2">Security Engineer & Researcher</p>
         </div>
       </header>
 
@@ -81,6 +97,47 @@ const Index = () => {
               <h3 className="text-xl text-cyber-green mt-2">{exp.title}</h3>
               <p className="text-sm text-cyber-gray">{exp.company}</p>
               <p className="mt-2">{exp.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Featured Media Section */}
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-mono text-cyber-blue mb-8">Featured Media</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "Cybersecurity Expert Warns of Rising Threats",
+              publisher: "Tech Weekly",
+              date: "2023",
+              link: "#",
+            },
+            {
+              title: "The Future of Network Security",
+              publisher: "Security Today",
+              date: "2023",
+              link: "#",
+            },
+            {
+              title: "Emerging Trends in Cyber Defense",
+              publisher: "Digital Guardian",
+              date: "2022",
+              link: "#",
+            },
+            {
+              title: "Expert Analysis: Cloud Security Challenges",
+              publisher: "Cloud Tech Review",
+              date: "2022",
+              link: "#",
+            },
+          ].map((media) => (
+            <div key={media.title} className="bg-glass p-6 rounded-lg backdrop-blur-sm hover:animate-border-glow cursor-pointer">
+              <h3 className="text-xl text-cyber-green">{media.title}</h3>
+              <div className="flex justify-between items-center mt-2 text-sm">
+                <span className="text-cyber-gray">{media.publisher}</span>
+                <span className="text-cyber-blue">{media.date}</span>
+              </div>
             </div>
           ))}
         </div>
