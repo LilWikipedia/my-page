@@ -2,6 +2,7 @@ import { Download, Shield, Terminal, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/home/Header";
 import Education from "@/components/home/Education";
+import Experience from "@/components/home/Experience";
 import Testimonials from "@/components/home/Testimonials";
 import Achievements from "@/components/home/Achievements";
 import Loading from "@/components/ui/loading";
@@ -26,6 +27,7 @@ const Index = () => {
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
       <Header />
       
+      {/* Hero Section */}
       <header className="container mx-auto px-4 py-12">
         <div className="overflow-hidden whitespace-nowrap border-r-2 border-cyber-green animate-typing">
           <h1 className="text-4xl md:text-6xl font-mono text-cyber-green animate-text-glow">
@@ -105,8 +107,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Keep existing sections */}
+      {/* Education and Experience Sections */}
       <Education />
+      <Experience />
+      
+      {/* Keep existing sections */}
       <Achievements />
       <Testimonials />
 
