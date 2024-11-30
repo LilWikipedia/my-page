@@ -16,7 +16,7 @@ const Education = () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-mono text-cyber-blue mb-8">Education</h2>
+      <h2 className="text-3xl font-mono text-cyber-green mb-8 animate-text-glow">Education</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {education.map((edu) => (
           <div key={edu.degree} className="bg-glass p-6 rounded-lg backdrop-blur-sm animate-border-glow">
