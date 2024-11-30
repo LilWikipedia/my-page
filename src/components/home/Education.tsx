@@ -15,7 +15,7 @@ const Education = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-8">
+    <div>
       <h2 className="text-2xl font-mono text-cyber-green mb-6">Education</h2>
       <div className="space-y-6">
         {education.map((edu) => (
@@ -31,7 +31,7 @@ const Education = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

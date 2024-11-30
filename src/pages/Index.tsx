@@ -108,13 +108,17 @@ const Index = () => {
       </section>
 
       {/* Education and Experience Sections */}
-      <Education />
-      <Experience />
+
+      {/* Education and Experience Section */}
+      <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Education />
+        <Experience />
+      </div>
       
       {/* Keep existing sections */}
       <Achievements />
       <Testimonials />
-
+      
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-mono text-cyber-blue mb-8">Contact</h2>
@@ -147,3 +151,4 @@ const Index = () => {
 };
 
 export default Index;
+

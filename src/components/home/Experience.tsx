@@ -27,7 +27,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-8">
+    <div>
       <h2 className="text-2xl font-mono text-cyber-green mb-6">Experience</h2>
       <div className="space-y-6">
         {experiences.map((exp) => (
@@ -43,7 +43,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
