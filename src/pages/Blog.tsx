@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Header from "@/components/home/Header";
 
 const Blog = () => {
   const blogPosts = [
@@ -30,10 +31,10 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
+      <Header />
       <div className="container mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-mono text-cyber-green animate-text-glow">Blog</h1>
-          <Link to="/" className="text-cyber-green hover:animate-text-glow">← Back to Home</Link>
         </div>
         
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -43,13 +44,12 @@ const Blog = () => {
               to={`/blog/${post.slug}`}
               className="group bg-glass rounded-lg overflow-hidden hover:animate-border-glow transition-all duration-300"
             >
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+              <img 
+                src={post.image} 
+                alt={post.title}
+                className="w-full aspect-video object-cover"
+                loading="lazy"
+              />
               <div className="p-6">
                 <h2 className="text-xl text-cyber-green mb-2 group-hover:animate-text-glow">{post.title}</h2>
                 <p className="text-cyber-gray mb-4">{post.excerpt}</p>

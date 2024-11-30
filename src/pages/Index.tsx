@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/home/Header";
 import Education from "@/components/home/Education";
 import Testimonials from "@/components/home/Testimonials";
+import Achievements from "@/components/home/Achievements";
 import { useState, useEffect } from "react";
 
 const Index = () => {
@@ -99,29 +100,33 @@ const Index = () => {
       </section>
 
       <Education />
-      
+      <Achievements />
       <Testimonials />
 
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-mono text-cyber-blue mb-8">Contact</h2>
-        <div className="bg-glass p-6 rounded-lg backdrop-blur-sm max-w-md mx-auto">
-          <div className="font-mono space-y-2">
-            <p>
-              <span className="text-cyber-green">$</span> echo $EMAIL
-              <br />
-              <span className="ml-4">john.doe@secure.net</span>
-            </p>
-            <p>
-              <span className="text-cyber-green">$</span> echo $LOCATION
-              <br />
-              <span className="ml-4">Silicon Valley, CA</span>
-            </p>
-            <p>
-              <span className="text-cyber-green">$</span> echo $GITHUB
-              <br />
-              <span className="ml-4">github.com/johndoe</span>
-            </p>
+        <div className="bg-glass p-8 rounded-lg backdrop-blur-sm max-w-2xl mx-auto">
+          <div className="font-mono space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="text-cyber-green">$</span>
+              <span className="text-cyber-gray">echo $EMAIL</span>
+              <span className="ml-2 text-cyber-green">ashutosh@barot.me</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-cyber-green">$</span>
+              <span className="text-cyber-gray">echo $LOCATION</span>
+              <span className="ml-2 text-cyber-green">San Francisco Bay Area</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-cyber-green">$</span>
+              <span className="text-cyber-gray">echo $WEBSITE</span>
+              <span className="ml-2">
+                <a href="https://ashutoshbarot.com" target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:animate-text-glow">
+                  ashutoshbarot.com
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </section>

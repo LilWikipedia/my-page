@@ -1,4 +1,5 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Header from "@/components/home/Header";
 
 const Article = () => {
   const { slug } = useParams();
@@ -14,19 +15,15 @@ const Article = () => {
 
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
+      <Header />
       <div className="container mx-auto px-4 py-12">
-        <div className="mb-8">
-          <Link to="/blog" className="text-cyber-green hover:animate-text-glow">← Back to Blog</Link>
-        </div>
-        
-        <article className="bg-glass rounded-lg overflow-hidden backdrop-blur-sm">
-          <div className="aspect-[21/9] w-full overflow-hidden">
-            <img 
-              src={article.image} 
-              alt={article.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <article className="bg-glass rounded-lg overflow-hidden backdrop-blur-sm max-w-4xl mx-auto">
+          <img 
+            src={article.image} 
+            alt={article.title}
+            className="w-full aspect-video object-cover"
+            loading="lazy"
+          />
           
           <div className="p-8">
             <h1 className="text-3xl md:text-4xl font-mono text-cyber-green mb-4">{article.title}</h1>
