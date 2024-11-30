@@ -1,6 +1,7 @@
 import { Shield, Terminal, Server, Database, Bug, Lock, Mail, MapPin, Globe, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,22 +13,30 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
       {/* Quick Contact Info */}
-      <div className="container mx-auto px-4 py-4 flex justify-end space-x-6 text-sm">
-        <a href="mailto:ashutosh@barot.me" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
-          <Mail size={14} />
-          ashutosh@barot.me
-        </a>
-        <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
-          <Globe size={14} />
-          ashutoshbarot.com
-        </a>
-        <span className="flex items-center gap-2 text-cyber-green">
-          <MapPin size={14} />
-          San Francisco Bay Area
-        </span>
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex flex-col sm:flex-row sm:justify-end space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+          <a href="mailto:ashutosh@barot.me" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+            <Mail size={14} />
+            ashutosh@barot.me
+          </a>
+          <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+            <Globe size={14} />
+            ashutoshbarot.com
+          </a>
+          <span className="flex items-center gap-2 text-cyber-green">
+            <MapPin size={14} />
+            San Francisco Bay Area
+          </span>
+        </div>
       </div>
 
-      {/* Hero Section */}
+      {/* Navigation */}
+      <nav className="container mx-auto px-4 py-2">
+        <div className="flex justify-end space-x-4">
+          <Link to="/blog" className="text-cyber-green hover:animate-text-glow">Blog</Link>
+        </div>
+      </nav>
+
       <header className="container mx-auto px-4 py-20">
         <div className="overflow-hidden whitespace-nowrap border-r-2 border-cyber-green animate-typing">
           <h1 className="text-4xl md:text-6xl font-mono text-cyber-green animate-text-glow">
