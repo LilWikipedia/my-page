@@ -13,9 +13,9 @@ const Header = () => {
     <div className="container mx-auto px-4">
       <div className="flex flex-col sm:flex-row sm:justify-between items-center space-y-4 sm:space-y-0 py-4">
         <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
-          <a href="mailto:ashutosh@barot.me" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+          <a href="mailto:a@ashutoshbarot.com" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
             <Mail size={14} />
-            ashutosh@barot.me
+            a@ashutoshbarot.com
           </a>
           <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
             <Globe size={14} />
@@ -23,7 +23,7 @@ const Header = () => {
           </a>
           <span className="flex items-center gap-2 text-cyber-green">
             <MapPin size={14} />
-            San Francisco Bay Area
+            Remote
           </span>
         </div>
         <div className="flex space-x-4">

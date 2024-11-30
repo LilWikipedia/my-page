@@ -37,7 +37,7 @@ const Index = () => {
           <Button 
             variant="outline" 
             className="border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-cyber-dark"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => window.open('https://ashutoshbarot.com/Ashutosh%20Barot%20-%20Cybersec%20Resume%207%20Yrs%20Exp_public.pdf', '_blank')}
           >
             <Download className="mr-2 h-4 w-4" />
             Download Resume
@@ -118,12 +118,12 @@ const Index = () => {
             <div className="flex items-center gap-2">
               <span className="text-cyber-green">$</span>
               <span className="text-cyber-gray">echo $EMAIL</span>
-              <span className="ml-2 text-cyber-green">ashutosh@barot.me</span>
+              <span className="ml-2 text-cyber-green">a@ashutoshbarot.com</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-cyber-green">$</span>
               <span className="text-cyber-gray">echo $LOCATION</span>
-              <span className="ml-2 text-cyber-green">San Francisco Bay Area</span>
+              <span className="ml-2 text-cyber-green">Remote</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-cyber-green">$</span>
