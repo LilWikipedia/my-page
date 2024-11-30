@@ -1,53 +1,14 @@
-import { Shield, Terminal, Server, Database, Bug, Lock, Mail, MapPin, Globe, Download } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Header from "@/components/home/Header";
+import Education from "@/components/home/Education";
+import Testimonials from "@/components/home/Testimonials";
 
 const Index = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-gray">
-      {/* Quick Contact Info */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col sm:flex-row sm:justify-end space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-          <a href="mailto:ashutosh@barot.me" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
-            <Mail size={14} />
-            ashutosh@barot.me
-          </a>
-          <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
-            <Globe size={14} />
-            ashutoshbarot.com
-          </a>
-          <span className="flex items-center gap-2 text-cyber-green">
-            <MapPin size={14} />
-            San Francisco Bay Area
-          </span>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <nav className="container mx-auto px-4 py-2 border-b border-cyber-green/20">
-        <div className="flex justify-end space-x-6">
-          <Link 
-            to="/" 
-            className="text-cyber-green text-lg font-bold hover:animate-text-glow border-b-2 border-cyber-green"
-          >
-            Home
-          </Link>
-          <Link 
-            to="/blog" 
-            className="text-cyber-green text-lg font-bold hover:animate-text-glow"
-          >
-            Blog
-          </Link>
-        </div>
-      </nav>
-
+      <Header />
+      
       <header className="container mx-auto px-4 py-20">
         <div className="overflow-hidden whitespace-nowrap border-r-2 border-cyber-green animate-typing">
           <h1 className="text-4xl md:text-6xl font-mono text-cyber-green animate-text-glow">
@@ -62,7 +23,7 @@ const Index = () => {
             onClick={() => window.open('/resume.pdf', '_blank')}
           >
             <Download className="mr-2 h-4 w-4" />
-            Download Resume
+              Download Resume
           </Button>
         </div>
       </header>
@@ -130,46 +91,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Media Section */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-mono text-cyber-blue mb-8">Featured Media</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            {
-              title: "Cybersecurity Expert Warns of Rising Threats",
-              publisher: "Tech Weekly",
-              date: "2023",
-              link: "#",
-            },
-            {
-              title: "The Future of Network Security",
-              publisher: "Security Today",
-              date: "2023",
-              link: "#",
-            },
-            {
-              title: "Emerging Trends in Cyber Defense",
-              publisher: "Digital Guardian",
-              date: "2022",
-              link: "#",
-            },
-            {
-              title: "Expert Analysis: Cloud Security Challenges",
-              publisher: "Cloud Tech Review",
-              date: "2022",
-              link: "#",
-            },
-          ].map((media) => (
-            <div key={media.title} className="bg-glass p-6 rounded-lg backdrop-blur-sm hover:animate-border-glow cursor-pointer">
-              <h3 className="text-xl text-cyber-green">{media.title}</h3>
-              <div className="flex justify-between items-center mt-2 text-sm">
-                <span className="text-cyber-gray">{media.publisher}</span>
-                <span className="text-cyber-blue">{media.date}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Education />
+      
+      <Testimonials />
 
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-12">
