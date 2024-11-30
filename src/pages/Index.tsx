@@ -1,5 +1,6 @@
-import { Shield, Terminal, Server, Database, Bug, Lock, Mail, MapPin, Globe } from "lucide-react";
+import { Shield, Terminal, Server, Database, Bug, Lock, Mail, MapPin, Globe, Download } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,19 +35,26 @@ const Index = () => {
           </h1>
           <p className="text-xl md:text-2xl mt-2">Security Engineer & Researcher</p>
         </div>
+        <div className="mt-8">
+          <Button 
+            variant="outline" 
+            className="border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-cyber-dark"
+            onClick={() => window.open('/resume.pdf', '_blank')}
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download Resume
+          </Button>
+        </div>
       </header>
 
       {/* Skills Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-mono text-cyber-blue mb-8">Technical Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Network Security", icon: <Shield className="text-cyber-green" />, level: 90 },
+            { name: "Security Engineering", icon: <Shield className="text-cyber-green" />, level: 90 },
             { name: "Penetration Testing", icon: <Terminal className="text-cyber-green" />, level: 85 },
-            { name: "System Administration", icon: <Server className="text-cyber-green" />, level: 80 },
-            { name: "Database Security", icon: <Database className="text-cyber-green" />, level: 75 },
-            { name: "Malware Analysis", icon: <Bug className="text-cyber-green" />, level: 85 },
-            { name: "Encryption", icon: <Lock className="text-cyber-green" />, level: 90 },
+            { name: "System Security", icon: <Lock className="text-cyber-green" />, level: 90 },
           ].map((skill) => (
             <div key={skill.name} className="bg-glass p-4 rounded-lg backdrop-blur-sm animate-border-glow">
               <div className="flex items-center gap-2 mb-2">
