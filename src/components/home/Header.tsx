@@ -1,29 +1,29 @@
-import { Mail, MapPin, Globe, Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const socialLinks = [
-    { icon: <Github size={20} />, url: "https://github.com/ashutoshbarot", label: "GitHub" },
-    { icon: <Linkedin size={20} />, url: "https://linkedin.com/in/ashutoshbarot", label: "LinkedIn" },
-    { icon: <Twitter size={20} />, url: "https://twitter.com/ashutoshbarot", label: "Twitter" },
-    { icon: <img src="/hackerone.svg" className="w-5 h-5" alt="HackerOne" />, url: "https://hackerone.com/ashutoshbarot", label: "HackerOne" }
+    { icon: <Github size={20} />, url: "https://github.com/lilwikipedia", label: "GitHub" },
+    //{ icon: <Linkedin size={20} />, url: "https://linkedin.com/in/ashutoshbarot", label: "LinkedIn" },
+    //{ icon: <Twitter size={20} />, url: "https://twitter.com/ashutoshbarot", label: "Twitter" },
+    //{ icon: <img src="/hackerone.svg" className="w-5 h-5" alt="HackerOne" />, url: "https://hackerone.com/ashutoshbarot", label: "HackerOne" }
   ];
 
   return (
     <div className="container mx-auto px-4">
       <div className="flex flex-col sm:flex-row sm:justify-between items-center space-y-4 sm:space-y-0 py-4">
         <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
-          <a href="mailto:a@ashutoshbarot.com" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+          <a href="mailto:cruzwootten@icloud.com" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
             <Mail size={14} />
-            a@ashutoshbarot.com
+            cruzwootten@icloud.com
           </a>
-          <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
+          {/* <a href="https://ashutoshbarot.com" target="_blank" className="flex items-center gap-2 text-cyber-green hover:animate-text-glow">
             <Globe size={14} />
             ashutoshbarot.com
-          </a>
+          </a> */}
           <span className="flex items-center gap-2 text-cyber-green">
             <MapPin size={14} />
-            Remote
+            Reno, NV
           </span>
         </div>
         <div className="flex space-x-4">
