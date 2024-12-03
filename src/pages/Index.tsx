@@ -5,7 +5,7 @@ import Header from "@/components/home/Header";
 import Testimonials from "@/components/home/Testimonials";
 import { Button } from "@/components/ui/button";
 import Loading from "@/components/ui/loading";
-import { Download, Lock, Shield, Terminal } from "lucide-react";
+import { Building, Download, Droplets, Fan, Gamepad2Icon, Network, Piano, RadioTower, SquarePower, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -53,14 +53,28 @@ const Index = () => {
         <h2 className="text-3xl font-mono text-cyber-green mb-8 animate-text-glow">About Me</h2>
         <div className="bg-glass p-6 rounded-lg backdrop-blur-sm animate-border-glow space-y-6">
           <p className="text-cyber-gray">
-            I am a hands-on technician with a wide range of experience from RF/5G deployments, to full-stack development, to game design. My free time is spent with my family, detailing sound, riding my motorcycles, or researching.
+            Hello, I'm Cruz! Welcome to my website! I am a hands-on technician, Fortnite content creator, and audio enthusiast. 
           </p>
           
           <div className="space-y-4">
-            <h3 className="text-xl text-cyber-green">Game Design:</h3>
+            <h3 className="text-xl text-cyber-green">Career:</h3>
             <ul className="list-disc list-inside space-y-2 text-cyber-gray">
               
-              <li>Content I have created has reached an audience of over 15 million users across more than 100 countries</li>
+              <li>Working as a contractor for AT&T contributing to the 5G deployment</li>
+              <li>Working with several property management companies ensuring all assets are at peak performance</li>
+              <li>Designing, installing, and integrating electrical systems to optimize processes </li>
+              <li>Designing, programming, and troubleshooting PLC systems </li>
+              <li>Working as a data technician on structured cabling projects, network troubleshooting, ect.</li>
+              <li>Trained in rope access and high angle rescue</li>
+            
+
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl text-cyber-green">Game Design:</h3>
+            <ul className="list-disc list-inside space-y-2 text-cyber-gray">
+              <li>My content has reached an audience of over 15 million users across more than 100 countries</li>
               <li>Proud to be considered a 'Founder' in the Fortnite content creation community, having over 5 years experience</li>
               <li>Developing content via Unreal Editor for Fortnite enabled my skillset to segue to Unreal Engine broadining my capabilities</li>
               <li>Developed over 80 custom experiences, using UEFN, and Epic Games new scriping language 'Verse'</li>
@@ -69,16 +83,6 @@ const Index = () => {
               <li>Verse (Programming Language) - https://en.wikipedia.org/wiki/Verse_(programming_language)</li>
               <li>I also created and designed an alternative documentation website for the Verse programming language for easier reference</li>
               <li>https://www.FNCwiki.com</li>
-
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-xl text-cyber-green">Bug Bounty and Hall of Fames:</h3>
-            <ul className="list-disc list-inside space-y-2 text-cyber-gray">
-              <li>Rank #2 on Coinbase's bug bounty program on Hackerone (since 2022)</li>
-              <li>Acknowledged by Google, Rapid7, FireEye, United Nations, Amazon, U.S. Department of Defense, and numerous Fortune 500 companies</li>
-              <li>Received Abuse research grant from Google to identify abuse risks in Google Meet</li>
             </ul>
           </div>
         </div>
@@ -88,9 +92,16 @@ const Index = () => {
         <h2 className="text-3xl font-mono text-cyber-green mb-8 animate-text-glow">Technical Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Security Engineering", icon: <Shield className="text-cyber-green" />, level: 90 },
-            { name: "Penetration Testing", icon: <Terminal className="text-cyber-green" />, level: 85 },
-            { name: "System Security", icon: <Lock className="text-cyber-green" />, level: 90 },
+            { name: "Electrical Systems", icon: <Zap className="text-cyber-green" />, level: 99 },
+            { name: "Building Automation", icon: <Building className="text-cyber-green" />, level: 90 },
+            { name: "PLCs", icon: <SquarePower className="text-cyber-green" />, level: 90 },
+            { name: "RF", icon: <RadioTower className="text-cyber-green" />, level: 75 },
+            { name: "Game Design", icon: <Gamepad2Icon className="text-cyber-green" />, level: 80 }, 
+            { name: "Audio Engineering", icon: <Piano className="text-cyber-green" />, level: 99 },
+            { name: "Network & Data", icon: <Network className="text-cyber-green" />, level: 95 },
+            { name: "HVAC", icon: <Fan className="text-cyber-green" />, level: 85 },
+            { name: "Plumbing Systems", icon: <Droplets className="text-cyber-green" />, level: 98 },
+            
           ].map((skill) => (
             <div key={skill.name} className="bg-glass p-4 rounded-lg backdrop-blur-sm animate-border-glow">
               <div className="flex items-center gap-2 mb-2">
@@ -106,6 +117,9 @@ const Index = () => {
                 />
               </div>
             </div>
+
+
+
           ))}
         </div>
       </section>
