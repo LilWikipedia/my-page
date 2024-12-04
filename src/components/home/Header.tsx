@@ -46,8 +46,8 @@ const Header = () => {
           <Link to="/" className="text-cyber-green text-lg font-bold hover:animate-text-glow border-b-2 border-cyber-green">
             Home
           </Link>
-          <Link to="/blog" className="text-cyber-green text-lg font-bold hover:animate-text-glow">
-            Blog
+          <Link to="/More" className="text-cyber-green text-lg font-bold hover:animate-text-glow">
+            More
           </Link>
         </div>
       </nav>

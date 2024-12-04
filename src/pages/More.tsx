@@ -1,30 +1,30 @@
-import { Link } from "react-router-dom";
 import Header from "@/components/home/Header";
+import { Link } from "react-router-dom";
 
-const Blog = () => {
-  const blogPosts = [
+const More = () => {
+  const Posts = [
     {
       id: 1,
-      title: "Advanced Network Security Techniques",
-      excerpt: "Exploring modern approaches to network security and threat prevention.",
-      date: "2024-03-15",
-      slug: "advanced-network-security",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
+      title: "Official creator page",
+      excerpt: "https://www.fortnite.com/@Lil-Wikipedia",
+      date: "2024",
+      slug: "https://www.fortnite.com/@Lil-Wikipedia",
+      image: "src/components/builtbywiki.png",
     },
     {
       id: 2,
-      title: "Cloud Security Best Practices",
-      excerpt: "Essential security measures for cloud infrastructure.",
-      date: "2024-03-10",
-      slug: "cloud-security-best-practices",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      title: "Official creator page (Alt account)",
+      excerpt: "https://www.fortnite.com/@wikipedia",
+      date: "2024",
+      slug: "https://www.fortnite.com/@wikipedia",
+      image: "src/components/builtbywiki.png",
     },
     {
       id: 3,
-      title: "Cybersecurity in 2024",
-      excerpt: "Latest trends and developments in cybersecurity.",
-      date: "2024-03-05",
-      slug: "cybersecurity-2024",
+      title: "Placeholder",
+      excerpt: "TODO: This is a placeholder slot.",
+      date: "2024",
+      slug: "2024",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80",
     },
   ];
@@ -34,14 +34,14 @@ const Blog = () => {
       <Header />
       <div className="container mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-mono text-cyber-green animate-text-glow">Blog</h1>
+          <h1 className="text-4xl font-mono text-cyber-green animate-text-glow">Links</h1>
         </div>
         
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
+          {Posts.map((post) => (
             <Link 
               key={post.id} 
-              to={`/blog/${post.slug}`}
+              to={`/More/${post.slug}`}
               className="group bg-glass rounded-lg overflow-hidden hover:animate-border-glow transition-all duration-300"
             >
               <img 
@@ -63,4 +63,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default More;
