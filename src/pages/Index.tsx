@@ -1,8 +1,8 @@
+import AudioPlayer from "@/components/AudioPlayer";
 import Achievements from "@/components/home/Achievements";
 import Education from "@/components/home/Education";
 import Experience from "@/components/home/Experience";
 import Header from "@/components/home/Header";
-import Testimonials from "@/components/home/Testimonials";
 import { Button } from "@/components/ui/button";
 import Loading from "@/components/ui/loading";
 import { Building, Download, Droplets, Fan, Gamepad2Icon, Network, Piano, RadioTower, SquarePower, Zap } from "lucide-react";
@@ -74,7 +74,7 @@ const Index = () => {
           <div className="space-y-4">
             <h3 className="text-xl text-cyber-green">Game Design:</h3>
             <ul className="list-disc list-inside space-y-2 text-cyber-gray">
-              <li>My content has reached an audience of over 15 million users across more than 100 countries</li>
+              <li>My content has reached an audience of over 15 million users with over 30 million impressions.</li>
               <li>Proud to be considered a 'Founder' in the Fortnite content creation community, having over 5 years experience</li>
               <li>Developing content via Unreal Editor for Fortnite enabled my skillset to segue to Unreal Engine broadining my capabilities</li>
               <li>Developed over 80 custom experiences, using UEFN, and Epic Games new scriping language 'Verse'</li>
@@ -85,8 +85,23 @@ const Index = () => {
               <li>https://www.FNCwiki.com</li>
             </ul>
           </div>
+          <div className="space-y-4">
+            <h3 className="text-xl text-cyber-green">Sound:</h3>
+            <ul className="list-disc list-inside space-y-2 text-cyber-gray">
+              
+              <li>Working as a contractor for AT&T contributing to the 5G deployment</li>
+              <li>Working with several property management companies ensuring all assets are at peak performance</li>
+              <li>Designing, installing, and integrating electrical systems to optimize processes </li>
+              <li>Designing, programming, and troubleshooting PLC systems </li>
+              <li>Working as a data technician on structured cabling projects, network troubleshooting, ect.</li>
+              <li>Trained in rope access and high angle rescue</li>
+            
+
+            </ul>
+          </div>
         </div>
       </section>
+      
             {/* Skills Section */}
             <section className="container mx-auto px-4 py-8">
         <h2 className="text-3xl font-mono text-cyber-green mb-8 animate-text-glow">Technical Skills</h2>
@@ -128,7 +143,7 @@ const Index = () => {
       
       {/* Keep existing sections */}
       <Achievements />
-      <Testimonials />
+      <AudioPlayer />
 
 
       {/* Education and Experience Sections */}

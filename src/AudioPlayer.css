@@ -1,0 +1,84 @@
+.audio-player-container {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ff00;
+  }
+  
+  .skills-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00;
+  }
+  
+  .track-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .track-list li {
+    margin: 10px 0;
+  }
+  
+  .track-list li button {
+    background: none;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00ff00;
+    transition: all 0.3s ease;
+  }
+  
+  .track-list li button:hover,
+  .track-list li.active button {
+    background-color: #00ff00;
+    color: #0a0a0a;
+    box-shadow: 0 0 10px #00ff00;
+  }
+  
+  .player-controls {
+    margin-top: 20px;
+  }
+  
+  .play-button {
+    background: none;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00ff00;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #00ff00;
+    color: #0a0a0a;
+  }
+  
+  .time-slider {
+    width: 100%;
+    margin-top: 15px;
+    appearance: none;
+    background: #0a0a0a;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    height: 5px;
+  }
+  
+  .time-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #00ff00;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00ff00;
+    cursor: pointer;
+  }
+  

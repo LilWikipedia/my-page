@@ -1,4 +1,4 @@
-import { Shield, Award, Bug } from "lucide-react";
+import { Award, Bug, ChartColumnIncreasing } from "lucide-react";
 
 const Achievements = () => {
   const cves = [
@@ -10,9 +10,9 @@ const Achievements = () => {
 
   const achievements = [
     {
-      title: "Security Research Impact",
-      description: "Found and reported critical vulnerabilities in major systems including Rapid7 Nexpose, Quick Heal Total Security, Nicehash Miner, and phpMyAdmin",
-      icon: <Shield className="w-6 h-6 text-cyber-green" />
+      title: "Reach",
+      description: "As of late 2024, content I have created in the UGC Fortnite ecosystem has reached over 15 million users with peak CCU coming in at 2k and over 30 million total impressions ",
+      icon: <ChartColumnIncreasing className="w-6 h-6 text-cyber-green" />
     },
     {
       title: "United Airlines Recognition",
