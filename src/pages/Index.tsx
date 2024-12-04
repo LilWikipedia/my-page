@@ -1,11 +1,8 @@
 import AudioPlayer from "@/components/AudioPlayer";
 import Achievements from "@/components/home/Achievements";
-import Education from "@/components/home/Education";
-import Experience from "@/components/home/Experience";
 import Header from "@/components/home/Header";
-import { Button } from "@/components/ui/button";
 import Loading from "@/components/ui/loading";
-import { Building, Download, Droplets, Fan, Gamepad2Icon, Network, Piano, RadioTower, SquarePower, Zap } from "lucide-react";
+import { Building, Droplets, Fan, Gamepad2Icon, Network, Piano, RadioTower, SquarePower, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -35,16 +32,7 @@ const Index = () => {
           </h1>
           <p className="text-xl md:text-2xl mt-2">Technician, Game Designer, and Audio Enthusiast</p>
         </div>
-        <div className="mt-6">
-          <Button 
-            variant="outline" 
-            className="border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-cyber-dark"
-            onClick={() => window.open('https://ashutoshbarot.com/Ashutosh%20Barot%20-%20Cybersec%20Resume%207%20Yrs%20Exp_public.pdf', '_blank')}
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
-          </Button>
-        </div>
+ 
       </header>
 
       
@@ -72,7 +60,7 @@ const Index = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl text-cyber-green">Game Design:</h3>
+            <h3 className="text-xl text-cyber-green">Game Development:</h3>
             <ul className="list-disc list-inside space-y-2 text-cyber-gray">
               <li>My content has reached an audience of over 15 million users with over 30 million impressions.</li>
               <li>Proud to be considered a 'Founder' in the Fortnite content creation community, having over 5 years experience</li>
@@ -89,12 +77,13 @@ const Index = () => {
             <h3 className="text-xl text-cyber-green">Sound:</h3>
             <ul className="list-disc list-inside space-y-2 text-cyber-gray">
               
-              <li>Working as a contractor for AT&T contributing to the 5G deployment</li>
-              <li>Working with several property management companies ensuring all assets are at peak performance</li>
-              <li>Designing, installing, and integrating electrical systems to optimize processes </li>
-              <li>Designing, programming, and troubleshooting PLC systems </li>
-              <li>Working as a data technician on structured cabling projects, network troubleshooting, ect.</li>
-              <li>Trained in rope access and high angle rescue</li>
+              <li>I have been creating, composing, and designing sound for over 15 years</li>
+              <li>While not at a professional capacity, my audio has still reached over 100k views</li>
+              <li>My public facing archive of sound spans over 5 gigabytes, while privately it's larger than 20 gigabytes</li>
+              <li>My deep passion led me to build a 200 sq.ft. fully equiped studio in my backyard </li>
+              <li>If you are an artist who is need of a producer or engineer, please reach out via email or socials </li>
+              <li>This site contains many of my instrumentals, feel free to browse them and inquire if interested</li>
+              <li>I am NOT interested in music promotion or any other similar solicitation</li>
             
 
             </ul>
@@ -111,7 +100,7 @@ const Index = () => {
             { name: "Building Automation", icon: <Building className="text-cyber-green" />, level: 90 },
             { name: "PLCs", icon: <SquarePower className="text-cyber-green" />, level: 90 },
             { name: "RF", icon: <RadioTower className="text-cyber-green" />, level: 75 },
-            { name: "Game Design", icon: <Gamepad2Icon className="text-cyber-green" />, level: 80 }, 
+            { name: "Game Development", icon: <Gamepad2Icon className="text-cyber-green" />, level: 80 }, 
             { name: "Audio Engineering", icon: <Piano className="text-cyber-green" />, level: 99 },
             { name: "Network & Data", icon: <Network className="text-cyber-green" />, level: 95 },
             { name: "HVAC", icon: <Fan className="text-cyber-green" />, level: 85 },
@@ -143,18 +132,9 @@ const Index = () => {
       
       {/* Keep existing sections */}
       <Achievements />
-      <AudioPlayer />
 
-
-      {/* Education and Experience Sections */}
-
-      {/* Education and Experience Section */}
-      <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Education />
-        <Experience />
-      </div>
       
-      {/* Contact Section */}
+
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-mono text-cyber-blue mb-8">Contact</h2>
         <div className="bg-glass p-8 rounded-lg backdrop-blur-sm max-w-2xl mx-auto">
@@ -162,28 +142,51 @@ const Index = () => {
             <div className="flex items-center gap-2">
               <span className="text-cyber-green">$</span>
               <span className="text-cyber-gray">echo $EMAIL</span>
-              <span className="ml-2 text-cyber-green">a@ashutoshbarot.com</span>
+              <span className="ml-2 text-cyber-green">cruzwootten@icloud.com</span>
             </div>
+      
             <div className="flex items-center gap-2">
               <span className="text-cyber-green">$</span>
               <span className="text-cyber-gray">echo $LOCATION</span>
-              <span className="ml-2 text-cyber-green">Remote</span>
+              <span className="ml-2 text-cyber-green">Reno, NV</span>
+            </div>
+      
+            <div className="flex items-center gap-2">
+              <span className="text-cyber-green">$</span>
+              <span className="text-cyber-gray">echo $X</span>
+              <span className="ml-2">
+                <a 
+                  href="https://x.com/Lilwikipediafn" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-cyber-green hover:animate-text-glow"
+                >
+                  @LilWikipediaFN
+                </a>
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-cyber-green">$</span>
-              <span className="text-cyber-gray">echo $WEBSITE</span>
+              <span className="text-cyber-gray">echo $TIKTOK</span>
               <span className="ml-2">
-                <a href="https://ashutoshbarot.com" target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:animate-text-glow">
-                  ashutoshbarot.com
+                <a 
+                  href="https://www.tiktok.com/@lilwikipediafn" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-cyber-green hover:animate-text-glow"
+                >
+                  @LilWikipediaFN
                 </a>
               </span>
             </div>
           </div>
         </div>
       </section>
-    </div>
+      <AudioPlayer />
+      </div>
   );
 };
+
 
 export default Index;
 

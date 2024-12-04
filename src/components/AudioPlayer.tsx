@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
-//import 'AudioPlayer.css';
 import React, { useEffect, useRef, useState } from 'react';
+import './AudioPlayer.css';
 
 // Initialize Supabase client
 const supabaseUrl = 'https://skojolxihqmikyakxdrz.supabase.co'; // Replace with your Supabase URL
@@ -26,7 +26,7 @@ const AudioPlayer: React.FC = () => {
           console.error('Error fetching audio files:', error);
         } else {
           const fileNames = data.map((file) => file.name);
-          setAudioFiles(fileNames);
+          setAudioFiles(fileNames.reverse());
         }
       } catch (error) {
         console.error('Error fetching audio files:', error);
@@ -80,7 +80,7 @@ const AudioPlayer: React.FC = () => {
 
   return (
     <div className="audio-player-container">
-      <div className="skills-header">Audio Tracks</div>
+      <div className="skills-header">My Audio</div>
       <ul className="track-list">
         {audioFiles.map((file, index) => (
           <li key={index} className={currentTrack === index ? 'active' : ''}>

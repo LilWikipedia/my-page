@@ -1,13 +1,14 @@
 .audio-player-container {
-    background-color: #0a0a0a;
-    color: #00ff00;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
-    border: 2px solid #00ff00;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 20px #00ff00;
-  }
+  background-color: #0a0a0a;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 40px; /* Increased padding */
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ff00;
+  margin: 20px; /* Added margin for spacing from other elements */
+}
   
   .skills-header {
     font-size: 24px;
@@ -18,7 +19,27 @@
   .track-list {
     list-style: none;
     padding: 0;
-  }
+    max-height: 300px; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 20px 0;
+    /* Add custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #00ff00 #0a0a0a;
+}
+
+/* Custom scrollbar styling for webkit browsers */
+.track-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.track-list::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+.track-list::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+    border-radius: 4px;
+}
   
   .track-list li {
     margin: 10px 0;
